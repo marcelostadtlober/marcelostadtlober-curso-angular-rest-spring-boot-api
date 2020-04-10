@@ -24,6 +24,7 @@ import com.mstadtlober.algamoneyapi.event.RecursoCriadoEvent;
 import com.mstadtlober.algamoneyapi.exceptionhandler.AlgamoneyExceptionHandler.Erro;
 import com.mstadtlober.algamoneyapi.model.Lancamento;
 import com.mstadtlober.algamoneyapi.repository.LancamentoRepository;
+import com.mstadtlober.algamoneyapi.repository.filter.LancamentoFilter;
 import com.mstadtlober.algamoneyapi.service.LancamentoService;
 import com.mstadtlober.algamoneyapi.service.exception.PessoaInexistenteOuInativaException;
 
@@ -44,8 +45,8 @@ public class LancamentoResource {
 	private MessageSource messageSource;
 	
 	@GetMapping
-	public List<Lancamento> listar() {
-		return lancamentoRepository.findAll();
+	public List<Lancamento> pesquisar(LancamentoFilter lancamentoFilter) {
+		return lancamentoRepository.filtrar(lancamentoFilter);
 	}
 	
 	@GetMapping("/{codigo}")
