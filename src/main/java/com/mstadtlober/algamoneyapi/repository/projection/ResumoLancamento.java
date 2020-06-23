@@ -9,19 +9,19 @@ public class ResumoLancamento {
 	
 	private Long codigo;
 	private String descricao;
-	private LocalDate dataVercimento;
+	private LocalDate dataVencimento;
 	private LocalDate dataPagamento;
 	private BigDecimal valor;
 	private TipoLancamento tipo;
 	private String categoria;
 	private String pessoa;
 	
-	public ResumoLancamento(Long codigo, String descricao, LocalDate dataVercimento, LocalDate dataPagamento,
+	public ResumoLancamento(Long codigo, String descricao, LocalDate dataVencimento, LocalDate dataPagamento,
 			BigDecimal valor, TipoLancamento tipo, String categoria, String pessoa) {
 		super();
 		this.codigo = codigo;
 		this.descricao = descricao;
-		this.dataVercimento = dataVercimento;
+		this.dataVencimento = dataVencimento;
 		this.dataPagamento = dataPagamento;
 		this.valor = valor;
 		this.tipo = tipo;
@@ -43,11 +43,11 @@ public class ResumoLancamento {
 		this.descricao = descricao;
 	}
 	
-	public LocalDate getDataVercimento() {
-		return dataVercimento;
+	public LocalDate getDataVencimento() {
+		return dataVencimento;
 	}
-	public void setDataVercimento(LocalDate dataVercimento) {
-		this.dataVercimento = dataVercimento;
+	public void setDataVencimento(LocalDate dataVencimento) {
+		this.dataVencimento = dataVencimento;
 	}
 	
 	public LocalDate getDataPagamento() {
